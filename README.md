@@ -66,6 +66,16 @@ jupyter lab
 
 Las bases de datos se descargan aparte: instrucciones en [data/README.md](data/README.md).
 
+## Notebooks
+
+| Notebook | Qué hace |
+|---|---|
+| [01_primera_prueba_LPC10](notebooks/01_primera_prueba_LPC10.ipynb) | Análisis-síntesis LPC10 del capítulo sobre 8 señales de PTDB-TUG: remuestreo, envolvente, polos, residuo, pitch del capítulo y comparación con el laringógrafo |
+| [02_comparacion_estimadores](notebooks/02_comparacion_estimadores.ipynb) | Compara el estimador del capítulo con cepstrum y YIN (VDE, GPE, FPE, mujeres vs hombres) sobre 200 grabaciones, y mete cada uno en el decodificador LPC10 |
+
+Se corren desde la carpeta `notebooks/` (las rutas son relativas). En Colab, cambiar `DATA_DIR` en la primera celda; si
+faltan archivos, se descargan sueltos del servidor de PTDB-TUG.
+
 ## Convenciones
 
 - Minutas de cada reunión en `docs/reuniones/` (las decisiones de WhatsApp se pasan a la minuta).
