@@ -2,6 +2,7 @@ numpy
 scipy
 matplotlib
 pandas
+openpyxl
 soundfile
 librosa
 praat-parselmouth

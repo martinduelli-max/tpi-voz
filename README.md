@@ -72,6 +72,7 @@ Las bases de datos se descargan aparte: instrucciones en [data/README.md](data/R
 |---|---|
 | [01_primera_prueba_LPC10](notebooks/01_primera_prueba_LPC10.ipynb) | Análisis-síntesis LPC10 del capítulo sobre 8 señales de PTDB-TUG: remuestreo, envolvente, polos, residuo, pitch del capítulo y comparación con el laringógrafo |
 | [02_comparacion_estimadores](notebooks/02_comparacion_estimadores.ipynb) | Compara el estimador del capítulo con cepstrum y YIN (VDE, GPE, FPE, mujeres vs hombres) sobre 200 grabaciones, y mete cada uno en el decodificador LPC10 |
+| [03_evaluacion_base_completa](notebooks/03_evaluacion_base_completa.ipynb) | Describe la base PTDB-TUG y repite la comparación sobre toda la base (4678 grabaciones, sin las de calibración): métricas por sexo y por hablante, test de Wilcoxon, error vs F0 del hablante, errores de octava y conclusiones. Genera una biblioteca de 400 audios para comparar métodos (`results/audio/03_base_completa/`, con `indice.xlsx`). Guarda caché en `results/cache/` |
 
 Se corren desde la carpeta `notebooks/` (las rutas son relativas). En Colab, cambiar `DATA_DIR` en la primera celda; si
 faltan archivos, se descargan sueltos del servidor de PTDB-TUG.
