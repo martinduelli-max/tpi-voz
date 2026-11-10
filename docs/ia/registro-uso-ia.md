@@ -1,18 +1,16 @@
 # Registro de uso de IA
 
-La Guía Metodológica 2026 exige que el informe final incluya **declaración de uso, listado de prompts principales y versión
-del motor de IA**. Uso permitido: copiloto (lluvia de ideas, estructurar y depurar código). Prohibido: usar IA en parciales o en
-la defensa, o reemplazar el razonamiento propio / la bibliografía obligatoria. Pena por mal uso: desaprobación automática.
+**Herramienta:** Claude Opus 5.5 (Claude Code, app de escritorio), usada por Martín Duelli entre el 18/10 y el 10/11/2026.
 
-Cada integrante agrega una fila cada vez que use una IA para algo del TPI.
+**Uso:** como copiloto, dentro de lo que permite la Guía Metodológica 2026 (ideas, estructura y depuración de código). No se
+usó en parciales ni en la defensa. Todo lo generado lo revisó el grupo y los resultados se verificaron contra la bibliografía y
+los datos.
 
-| Fecha | Integrante | Herramienta y versión | Para qué (prompt principal resumido) | Qué se usó del resultado | Revisado/verificado por |
-|---|---|---|---|---|---|
-| 18/10/2026 | Martín | Claude Opus 5.5 (Claude Code, app de escritorio) | Leer la guía metodológica y la clase de aplicaciones; proponer ideas de TPI de voz con bases de datos públicas; resumir teoría y herramientas de procesamiento de voz; armar la estructura del repositorio | Borrador de propuestas (`docs/hitos/H1_propuestas.md`), resumen teórico (`docs/teoria/resumen-voz.md`), estructura del repo y plantilla de minuta. Las propuestas se discuten y deciden en la Reunión 01 | _completar_ |
-| 19/10/2026 | Martín Duelli | Claude Opus 5.5 (Claude Code, app de escritorio) | Evaluar propuestas del grupo (sonidos respiratorios, tos, CPP, tracto vocal, disartria) y, tras la devolución del tutor, reformular 3 propuestas centradas en codificación y decodificación de voz según el capítulo de Dutoit et al. | Borrador `docs/hitos/H1_propuestas_v2.md` y minuta `docs/reuniones/2026-10-19_R02_consulta-tutor.md`, a discutir en grupo | _completar_ |
-| 25/10/2026 | Martín Duelli | Claude Opus 5.5 (Claude Code, app de escritorio) | Traducir a Python el análisis-síntesis LPC10 del capítulo (secciones 1.2.1 a 1.2.6) y armar la primera prueba con señales de PTDB-TUG: remuestreo, análisis de una trama, pitch del capítulo, síntesis y comparación con la F0 del laringógrafo | `notebooks/01_primera_prueba_LPC10.ipynb` y figuras en `results/figures/`. El umbral sonoro/sordo (0,25) y el pasa-altos de 70 Hz se eligieron probando sobre las 8 señales | _completar_ |
-| 25/10/2026 | Martín Duelli | Claude Opus 5.5 (Claude Code, app de escritorio) | Agregar comparación de voz femenina y masculina al notebook 01; implementar cepstrum y YIN, calibrar umbrales sonoro/sordo y comparar los tres estimadores con VDE, GPE y FPE por sexo, metiendo cada uno en el decodificador LPC10 | Sección 6.2 del notebook 01, `notebooks/02_comparacion_estimadores.ipynb`, figuras `02_*` y `results/02_metricas_por_sexo.csv` | _completar_ |
-| 26/10/2026 | Martín Duelli | Claude Opus 5.5 (Claude Code, app de escritorio) | Redactar las respuestas de la sección 8 del notebook 01 a partir de lo conversado con el tutor; agregar espectrogramas por etapa (antes y después del antialias, del pasa-altos y del LPC10) para ver dónde se atenúa el ruido | Secciones 6.3 y 8 del notebook 01 y figura `01_espectrogramas_por_etapa.png` | _completar_ |
-| 30/10/2026 | Martín Duelli | Claude Opus 5.5 (Claude Code, app de escritorio) | Revisar la entrega del Hito 2 contra el repositorio y agregar el FFE a la tabla de métricas del notebook 01, que el documento menciona | Columna FFE en la sección 7 del notebook 01 | _completar_ |
-| 26/10/2026 | Martín Duelli | Claude Opus 5.5 (Claude Code, app de escritorio) | Evaluar los tres estimadores sobre la base completa PTDB-TUG con los umbrales del notebook 02: métricas por sexo y por hablante, test de Wilcoxon, error vs F0 del hablante y errores de octava; preparar el acceso a los datos en local y desde Google Drive | `notebooks/03_evaluacion_base_completa.ipynb`, figuras `03_*` y tablas `results/03_*.csv` | _completar_ |
-| 31/10/2026 | Martín Duelli | Claude Opus 5.5 (Claude Code, app de escritorio) | Redactar la descripción de PTDB-TUG a partir de su documentación oficial y de estadísticas medidas sobre la base; redactar las conclusiones del notebook 03 con los resultados y la impresión de escucha del grupo; generar una biblioteca de audios por frase y hablante con un índice en Excel; guardar la caché en Google Drive al correr en Colab | Secciones "La base de datos", 0, 7.1 y 8 del notebook 03; `results/audio/03_base_completa/indice.xlsx` (los audios no se versionan) | _completar_ |
+## Qué se le pidió
+
+1. **Propuesta:** ideas de TPI con bases públicas de voz y, tras la devolución del tutor, reformularlas hacia codificación LPC10.
+2. **Código:** pasar a Python el LPC10 del capítulo de Dutoit et al., implementar cepstrum y YIN, calibrar los umbrales y
+   evaluar los tres métodos con VDE, GPE, FPE, Wilcoxon y Spearman sobre PTDB-TUG (notebooks 01, 02 y 03).
+3. **Redacción:** borradores de textos de los notebooks (descripción de la base y conclusiones), a partir de los resultados y
+   de lo hablado con el tutor.
+4. **Presentación:** figuras, audios de ejemplo y apoyo para el guion de la defensa.
