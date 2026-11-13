@@ -6,9 +6,14 @@ Tema general: **procesamiento digital de señales de voz** con datos reales.
 Paper base: Dutoit, Moreau & Kroon (2009), "How is speech processed in a cell phone conversation?", cap. 1 de
 *Applied Signal Processing: A MATLAB-Based Proof of Concept* (Springer). El PDF no se sube al repo (derechos de autor).
 
-> Estado: **Hito 2 — Propuesta de implementación** (semana 12).
-> Propuesta elegida (Hito 1, [entrega](docs/hitos/Hito1_Grupo3_CodificacionDeLaVoz.pdf)): **Evaluación de métodos de
-> estimación de pitch y clasificación sonoro/sordo en la codificación de voz LPC10** (base PTDB-TUG).
+> Estado: **terminado**. Informe final entregado el 10/11/2026 ([Hito 4](docs/hitos/Hito4_Grupo3_InformeFinal.pdf)).
+> Tema: **Evaluación de métodos de estimación de pitch y clasificación sonoro/sordo en la codificación de voz LPC10**
+> (base PTDB-TUG).
+
+**Resultado principal** (base completa, 4678 grabaciones): YIN es el que mejor decide sonoro/sordo (VDE 5,8 % en mujeres y
+7,2 % en hombres) y el más preciso (FPE 1,5 / 1,6 %); el cepstrum comete menos errores gruesos (GPE 2,8 / 0,8 %); la
+autocorrelación del residuo (el método del capítulo) no gana en ninguna métrica. Al oído, la calidad la limita el modelo de
+excitación del LPC10 y no el estimador.
 
 Grupo 3 — Tutor: Iván Peralta.
 
@@ -30,12 +35,13 @@ Roles definidos según la Guía Metodológica del TPI. Ver detalle y roles suger
 
 | Hito | Semana | Entregable | Estado |
 |---|---|---|---|
-| H1 — Definición del problema | 11 | 1 carilla con 3 ideas → 1 elegida | en curso |
-| H2 — Propuesta de implementación | 12 | 2 carillas: diagrama de bloques, justificación teórica, link a la base | — |
-| H3 — Prototipo funcional (MVP) | 14 | Notebook / script Python + gráficos preliminares | — |
-| H4 — Defensa final | 15 | Presentación 15–20 min + defensa individual | — |
+| H1 — Definición del problema | 11 | 1 carilla con 3 ideas → 1 elegida | [entregado](docs/hitos/Hito1_Grupo3_CodificacionDeLaVoz.pdf) |
+| H2 — Propuesta de implementación | 12 | 2 carillas: diagrama de bloques, justificación teórica, link a la base | [entregado](docs/hitos/Hito2_Grupo3_CodificacionDeLaVoz.pdf) |
+| H3 — Prototipo funcional (MVP) | 14 | Notebook Python + gráficos preliminares | [entregado](docs/hitos/Hito3_Grupo3_CodificacionDeLaVoz.pdf) |
+| H4 — Informe final y defensa | 15 | Informe + presentación 15–20 min + defensa individual | [informe entregado](docs/hitos/Hito4_Grupo3_InformeFinal.pdf) |
 
-El incumplimiento de un hito impide avanzar al siguiente.
+Borradores de propuestas del Hito 1: [H1_propuestas.md](docs/hitos/H1_propuestas.md) y
+[H1_propuestas_v2.md](docs/hitos/H1_propuestas_v2.md) (después de la devolución del tutor).
 
 ## Estructura del repositorio
 
@@ -44,13 +50,15 @@ tpi-voz/
 ├── README.md               ← este archivo
 ├── docs/
 │   ├── reuniones/          ← minutas: AAAA-MM-DD_RNN_tema.md
-│   ├── hitos/              ← entregables de cada hito
+│   ├── hitos/              ← entregables de los 4 hitos (PDF)
 │   ├── teoria/             ← resúmenes teóricos del grupo
 │   └── ia/                 ← registro OBLIGATORIO de uso de IA
 ├── data/                   ← señales (NO se suben al repo, ver data/README.md)
-├── notebooks/              ← exploración y MVP
-├── src/                    ← funciones reutilizables (filtros, LPC, F0, métricas…)
-├── results/figures/        ← gráficos exportados para informe y defensa
+├── notebooks/              ← 01 primera prueba, 02 comparación, 03 base completa
+├── results/
+│   ├── figures/            ← gráficos para informe y defensa
+│   ├── audio/              ← audios resintetizados (los .wav no se suben; queda el índice)
+│   └── *.csv               ← tablas de métricas y test de Wilcoxon
 ├── requirements.txt
 └── .gitignore
 ```
