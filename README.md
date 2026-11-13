@@ -38,7 +38,7 @@ Roles definidos según la Guía Metodológica del TPI. Ver detalle y roles suger
 | H1 — Definición del problema | 11 | 1 carilla con 3 ideas → 1 elegida | [entregado](docs/hitos/Hito1_Grupo3_CodificacionDeLaVoz.pdf) |
 | H2 — Propuesta de implementación | 12 | 2 carillas: diagrama de bloques, justificación teórica, link a la base | [entregado](docs/hitos/Hito2_Grupo3_CodificacionDeLaVoz.pdf) |
 | H3 — Prototipo funcional (MVP) | 14 | Notebook Python + gráficos preliminares | [entregado](docs/hitos/Hito3_Grupo3_CodificacionDeLaVoz.pdf) |
-| H4 — Informe final y defensa | 15 | Informe + presentación 15–20 min + defensa individual | [informe entregado](docs/hitos/Hito4_Grupo3_InformeFinal.pdf) |
+| H4 — Informe final y defensa | 15 | Informe + presentación 15–20 min + defensa individual | [informe](docs/hitos/Hito4_Grupo3_InformeFinal.pdf) y [presentación](docs/hitos/Hito4_Grupo3_Presentacion.pdf) |
 
 Borradores de propuestas del Hito 1: [H1_propuestas.md](docs/hitos/H1_propuestas.md) y
 [H1_propuestas_v2.md](docs/hitos/H1_propuestas_v2.md) (después de la devolución del tutor).
